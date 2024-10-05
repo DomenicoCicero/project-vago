@@ -1,0 +1,400 @@
+/* stile navbar */
+
+.img-logo {
+  width: 20%;
+  height: auto;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #000; /* Colore del link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* Colore della sottolineatura */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color: #000; /* Colore quando si passa con il mouse */
+}
+
+.nav-link.active {
+  color: #000; /* Colore del link attivo */
+}
+
+.navbar {
+  position: fixed; /* La navbar si posiziona sopra l'immagine */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Assicurati che la navbar sia in primo piano */
+  background-color: rgba(255, 255, 255, 0) !important; /* Colore bianco semi-trasparente */
+  backdrop-filter: blur(4px);
+}
+
+/* stile hero */
+
+.hero-section {
+  background-image: url("./assets/img/image2.webp"); /* Link all'immagine di sfondo */
+  background-size: cover; /* Fa sì che l'immagine copra tutta l'area */
+  background-position: center;
+  height: 100vh; /* L'altezza sarà l'intera altezza della finestra */
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+}
+
+/* Image Gallery Inner */
+
+.image-gallery {
+  max-width: 800px;
+  margin: auto;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail.active {
+  border: 2px solid #007bff;
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .thumbnail img {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 884px) {
+  .thumbnail img {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 821px) {
+  .thumbnail img {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .thumbnail img {
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .thumbnail img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .thumbnail img {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .thumbnail img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .thumbnail img {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .thumbnail img {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .thumbnail img {
+    width: 65px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .thumbnail img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .thumbnail img {
+    width: 55px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .thumbnail img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 339px) {
+  .thumbnail img {
+    width: 45px;
+  }
+}
+
+/* testo inner */
+
+.inner-title {
+  text-align: center;
+  font-family: initial;
+}
+
+.inner-text {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* News Section */
+
+.news-card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.card-image {
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.card-content a {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card-content a:hover {
+  color: #0056b3;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.news-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/* collection carousel */
+
+.collection-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-card:hover {
+  transform: translateY(-10px);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-name-item {
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1100px) {
+  .carousel-name-item {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .carousel-name-item {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .carousel-name-item {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .carousel-name-item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .carousel-name-item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 392px) {
+  .carousel-name-item {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  .carousel-name-item {
+    font-size: 10px;
+  }
+}
+
+/* footer */
+footer {
+  background-color: #427dbc;
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  color: white;
+}
+
+.icon-box p {
+  margin-bottom: 0.25rem;
+}
+
+.styled-icon {
+  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0 3px 0;
+}
+
+.icon-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.icon-circle:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.icon-circle:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.divider {
+  color: white;
+}
