@@ -1,3 +1,10 @@
+.bg-body {
+  background-image: url(https://img.freepik.com/free-vector/subtle-white-background-with-diagonal-lines_1017-14763.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1728259200&semt=ais_hybrid);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* stile navbar */
 
 .img-logo {
@@ -204,7 +211,10 @@
 
 .inner-title {
   text-align: center;
-  font-family: initial;
+  font-family: sans-serif;
+  margin-block: 3rem;
+  font-size: 2.2rem;
+  color: rgb(216, 134, 18);
 }
 
 .inner-text {
